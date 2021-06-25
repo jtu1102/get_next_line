@@ -6,7 +6,7 @@
 /*   By: soahn <soahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 15:45:18 by soahn             #+#    #+#             */
-/*   Updated: 2021/06/25 14:00:54 by soahn            ###   ########.fr       */
+/*   Updated: 2021/06/25 16:07:08 by soahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ void	make_line(char **backup, char **line, int end_idx)
 
 	(*backup)[end_idx] = '\0';
 	*line = ft_strdup(*backup);
-	if (*(*backup + end_idx + 1) == '\0')
-		tmp = ft_strdup("");
-	else
-		tmp = ft_strdup((*backup) + end_idx + 1);
+	tmp = ft_strdup((*backup) + end_idx + 1);
 	free(*backup);
 	*backup = tmp;
 }
